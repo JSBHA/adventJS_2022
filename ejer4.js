@@ -14,16 +14,19 @@ const boxes1 = [
 function fitsInOneBox(boxes) {  
     
      // Ordenar las cajas por volumen (l * w * h)
-    boxes.sort((a, b) => (a.l * a.w * a.h) - (b.l * b.w * b.h));
+     boxes.sort((a, b) => (a.l * a.w * a.h)- (b.l * b.w * b.h));
 
-    for ( let i = 1; i < boxes.length; i++){
-        const box = boxes [i - 1];
-        const box1 = boxes[i];
+     // Comprobar si cada caja puede caber en la siguiente
+     for (let i = 1; i < boxes.length; i++){
+       const box = boxes[i - 1];
+       const box1 = boxes[i];
 
-        if ( ! (box.l < box1.l && box.w < box1.w && box.h < box1.h)){
-            return false 
-        }
-    }
+        // Verificar si la caja 1 cabe en la caja 2
+        if (!(box.l < box1.l && box.w < box1.w && box.h < box1.h)){
+         return false  // Si no cabe, devolvemos false
+       }
+     };         
+   
+     return true
   
-    return true 
   }
