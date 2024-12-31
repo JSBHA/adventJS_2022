@@ -23,7 +23,6 @@ function getMaxGifts(giftsCities, maxGifts, maxCities) {
     
   }
   
-
   const giftsCities = [12, 3, 11, 5, 7]
   const maxGifts = 20
   const maxCities = 3
@@ -33,4 +32,4 @@ function getMaxGifts(giftsCities, maxGifts, maxCities) {
   console.log(getMaxGifts([50, 70], 100, 1)) // 70
   console.log( getMaxGifts([50, 70, 30], 100, 2))// 100
   console.log(getMaxGifts([50, 70, 30], 100, 3) )// 100
- console.log( getMaxGifts([50, 70, 30], 100, 4)) // 100
+  console.log( getMaxGifts([50, 70, 30], 100, 4)) // 100
