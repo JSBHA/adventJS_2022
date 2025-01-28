@@ -1,7 +1,10 @@
 function wrapping(gifts) {
-    
-      return gifts.map(gift => {
+
+  // Se crea el nuevo arr dodne esten empacos los regalos 
+    return gifts.map(gift => {
+      //Calcular la longitud del empaque 
       let stars = '*'.repeat(gift.length * 2 );
+      //Se empaca el regalo utilizando el salto entre lianes /n 
       return  `${stars}\n*${gift}*\n${stars}`;
     })
 
