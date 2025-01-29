@@ -1,7 +1,3 @@
-const packOfGifts = ["book", "doll", "ball"]
-const reindeers = ["dasher", "dancer"]
-
-
 function distributeGifts(packOfGifts, reindeers) {
     
     // Calcula el peso total de los regalos
@@ -13,3 +9,6 @@ function distributeGifts(packOfGifts, reindeers) {
      // Calcula el número máximo de cajas que pueden ser entregadas
     return Math.floor(capacityReindeer / weightGifts)
   }
+
+  const packOfGifts = ["book", "doll", "ball"]
+  const reindeers = ["dasher", "dancer"]
