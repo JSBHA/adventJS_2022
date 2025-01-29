@@ -1,10 +1,7 @@
-const year = 2022 ;
-const holidays = ['01/06', '04/01', '12/25'];
-
- //Recorrer los dias festivos
 function countHours(year, holidays) {
   let totalHorasExtras = 0 ;
 
+  //Recorrer los dias festivos
   holidays.forEach(holiday => {
     // Crear una fecha a partir del año y el día festivo
     const date = new Date (`${year}-${holiday}`);
@@ -22,4 +19,6 @@ function countHours(year, holidays) {
   }
 
   console.log(countHours(year, holidays))
+  const year = 2022 ;
+  const holidays = ['01/06', '04/01', '12/25'];
   
