@@ -25,9 +25,8 @@ function getMaxGifts(giftsCities, maxGifts, maxCities) {
     // Iniciamos la función recursiva con la ciudad 0 y una combinación vacía
     bag (0, []);
 
-    // Si tenemos resultados, devolvemos el máximo de ellos; de lo contrario, retornamos 0
+    // Si tenemos resultados, devolvemos el máximo de ellos; de lo contrario, empezamos 0
     return result.length ? Math.max(...result) : 0; 
-    
   }
   
   const giftsCities = [12, 3, 11, 5, 7]
