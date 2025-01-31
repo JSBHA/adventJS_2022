@@ -1,24 +1,15 @@
 function countTime(leds) {
+    // Convertimos el array en una cadena y luego lo dividimos por cada '1'
+    let led = leds.join("").split("1")
 
-    let time = 0;
-    let allOn = false
+    // Unimos el primer grupo de ceros con el último para simular el ciclo de LEDs
+    led[0] += led.pop();
 
-    while (!allOn){
-        time += 7;
-        let newLeds = [...leds];
+     // Calculamos el tamaño del grupo más largo de ceros consecutivos
+    return Math.max(...led.map(ledOn => ledOn.length)) * 7;
 
-        for (let i = 1; i < leds.length; i++){
-            if(leds[i] === 0 && leds[i - 1] === 1){
-                newLeds[i] = 1;
-            }
-        }
-
-        leds = newLeds;
-        allOn = leds.every(led => led === 1);
-    }
-    return time;
   }
 
-  console.log(countTime([0, 1, 1, 0, 1]))
+  console.log(countTime([0, 1, 1, 0, 1]));
   console.log(countTime([0, 0, 0, 1]));
   console.log(countTime([0, 0, 1, 0, 0]));
