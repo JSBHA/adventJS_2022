@@ -19,5 +19,6 @@ function checkJump(heights) {
   // Debe haber una subida y una bajada, no puede ser solo uno de ellos
   return up && down;
 }
+
 const heights = [1, 3, 8, 5, 2];
 const heights1 = [1, 7, 3, 5];
