@@ -8,7 +8,6 @@ function countTime(leds) {
   // Calculamos el tamaño del grupo más largo de ceros consecutivos
   return Math.max(...led.map((ledOn) => ledOn.length)) * 7;
 }
-
 console.log(countTime([0, 1, 1, 0, 1]));
 console.log(countTime([0, 0, 0, 1]));
 console.log(countTime([0, 0, 1, 0, 0]));
